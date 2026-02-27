@@ -22,37 +22,37 @@ export const metadata: Metadata = {
 };
 
 const portfolio = [
-  { title: "Emma - Senior", folder: "Emma_-_Senior", cover: "IMG_8961.jpeg" },
-  { title: "Luca - Portraits", folder: "Luca_-_portraits", cover: "0T8A0834.jpg" },
-  { title: "Adrina - Pregnancy Announcement", folder: "adrina_-_pregnancy_announcement_session", cover: "0T8A0309-2.jpg" },
-  { title: "Bonczyk Family", folder: "bonczyk_family", cover: "IMG_9536.jpeg" },
-  { title: "Coats Family", folder: "coats_family", cover: "0T8A7502.jpg" },
-  { title: "Lauren & Baby - In Home", folder: "in_home_session", cover: "0T8A9159.jpg" },
-  { title: "Magruders - In Home Newborn", folder: "magruders_-_in_home_newborn_session", cover: "0T8A3973.jpg" },
-  { title: "Schultheis Family", folder: "schultheis_family", cover: "0T8A0108.jpg" },
-  { title: "Williams Family", folder: "williams_family", cover: "0T8A4861.jpeg" },
+  { title: "Emma - Senior", folder: "Emma_-_Senior", cover: "IMG_8961.webp" },
+  { title: "Luca - Portraits", folder: "Luca_-_portraits", cover: "0T8A0834.webp" },
+  { title: "Adrina - Pregnancy Announcement", folder: "adrina_-_pregnancy_announcement_session", cover: "0T8A0309-2.webp" },
+  { title: "Bonczyk Family", folder: "bonczyk_family", cover: "IMG_9536.webp" },
+  { title: "Coats Family", folder: "coats_family", cover: "0T8A7502.webp" },
+  { title: "Lauren & Baby - In Home", folder: "in_home_session", cover: "0T8A9159.webp" },
+  { title: "Magruders - In Home Newborn", folder: "magruders_-_in_home_newborn_session", cover: "0T8A3973.webp" },
+  { title: "Schultheis Family", folder: "schultheis_family", cover: "0T8A0108.webp" },
+  { title: "Williams Family", folder: "williams_family", cover: "0T8A4861.webp" },
 ];
 
 const sessions = [
   {
     title: "Maternity",
     desc: "Celebrate the beauty of this season with images that reflect the anticipation and love of your growing family.",
-    image: "/gallery/pregnancy.jpg",
+    image: "/gallery/pregnancy.webp",
   },
   {
     title: "Family",
     desc: "Whether it's laughter, chaos, or quiet moments in between, family sessions are about documenting your unique story just as it is.",
-    image: "/gallery/family.jpg",
+    image: "/gallery/family.webp",
   },
   {
     title: "NB+Baby",
     desc: "Those first weeks and months go by so quickly. These sessions focus on the tiny details and little moments you'll want to remember forever!",
-    image: "/gallery/newborn.jpg",
+    image: "/gallery/newborn.webp",
   },
   {
     title: "Events",
     desc: "From weddings to birthdays and everything in-between, event photography allows you to stay present while your memories are preserved.",
-    image: "/gallery/wedding-features.jpg",
+    image: "/gallery/wedding-features.webp",
   },
 ];
 

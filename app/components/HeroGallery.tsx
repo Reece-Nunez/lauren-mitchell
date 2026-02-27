@@ -9,12 +9,12 @@ import Image from "next/image";
  * Put images in /public/gallery/ and update this array.
  */
 const galleryImages = [
-  { src: "/gallery/baby-announcement.jpg", alt: "Baby announcement", focus: "center" },
-  { src: "/gallery/birthday-boy.jpg", alt: "Birthday boy", focus: "center top" },
-  { src: "/gallery/lauren.jpg", alt: "Lauren Mitchell", focus: "center" },
-  { src: "/gallery/family-beach.jpg", alt: "Family beach session", focus: "center bottom" },
-  { src: "/gallery/mom-baby-floor.jpg", alt: "Mother and baby", focus: "center" },
-  { src: "/gallery/wedding-features.jpg", alt: "Wedding photography", focus: "center" },
+  { src: "/gallery/baby-announcement.webp", alt: "Baby announcement", focus: "center" },
+  { src: "/gallery/birthday-boy.webp", alt: "Birthday boy", focus: "center top" },
+  { src: "/gallery/lauren.webp", alt: "Lauren Mitchell", focus: "center" },
+  { src: "/gallery/family-beach.webp", alt: "Family beach session", focus: "center bottom" },
+  { src: "/gallery/mom-baby-floor.webp", alt: "Mother and baby", focus: "center" },
+  { src: "/gallery/wedding-features.webp", alt: "Wedding photography", focus: "center" },
 ];
 
 const AUTOPLAY_MS = 5000;
@@ -149,6 +149,8 @@ export default function HeroGallery() {
             style={{ objectPosition: galleryImages[current].focus }}
             sizes="100vw"
             priority={current < 2}
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTYgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iOSIgZmlsbD0iIzJDMjgyNCIvPjwvc3ZnPg=="
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
         </motion.div>

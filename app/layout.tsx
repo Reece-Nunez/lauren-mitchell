@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Lauren Mitchell Photography",
     images: [
       {
-        url: "/branding/hero.jpg",
+        url: "/branding/hero.webp",
         width: 1200,
         height: 630,
         alt: "Lauren Mitchell Photography",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: "/apple-touch-icon.webp",
   },
   manifest: "/site.webmanifest",
   alternates: {

@@ -9,22 +9,26 @@ const sessions = [
   {
     title: "Maternity",
     desc: "Celebrate the beauty of this season with images that reflect the anticipation and love of your growing family. I recommend scheduling this session between 28-32 weeks of your pregnancy!",
-    image: "/gallery/pregnancy.jpg",
+    image: "/gallery/pregnancy.webp",
+    href: "/gallery/adrina_-_pregnancy_announcement_session",
   },
   {
     title: "Family",
     desc: "Whether it's laughter, chaos, or quiet moments in between, family sessions are about documenting your unique story just as it is.",
-    image: "/gallery/family.jpg",
+    image: "/gallery/family.webp",
+    href: "/gallery/coats_family",
   },
   {
     title: "NB+Baby",
     desc: "Those first weeks and months go by so quickly. These sessions focus on the tiny details and little moments you'll want to remember forever!",
-    image: "/gallery/newborn.jpg",
+    image: "/gallery/newborn.webp",
+    href: "/gallery/magruders_-_in_home_newborn_session",
   },
   {
     title: "Events",
     desc: "From weddings to birthdays and everything in-between, event photography allows you to stay present while your memories are preserved. I'll capture the big highlights and the little details that make the day unforgettable.",
-    image: "/gallery/wedding-features.jpg",
+    image: "/gallery/wedding-features.webp",
+    href: "/portfolio",
   },
 ];
 
@@ -38,7 +42,7 @@ export const metadata: Metadata = {
     description:
       "Maternity, family, newborn & event photography sessions in Ponca City, Oklahoma.",
     url: "/sessions",
-    images: [{ url: "/sessions-hero.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/sessions-hero.webp", width: 1200, height: 630 }],
   },
 };
 
@@ -53,7 +57,7 @@ export default function SessionsPage() {
 
       {/* ── Hero Banner ── */}
       <section className="relative h-[90vh] min-h-[700px] bg-charcoal flex items-center justify-center overflow-hidden">
-        <Image src="/sessions-hero.jpg" alt="Sessions" fill priority className="object-cover object-center" />
+        <Image src="/sessions-hero.webp" alt="Sessions" fill priority placeholder="blur" blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTYgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iOSIgZmlsbD0iI0M0QjI5QSIvPjwvc3ZnPg==" className="object-cover object-center" />
         <div className="absolute inset-0 bg-charcoal/50" />
         <div className="relative text-center px-6">
           <FadeIn>
@@ -77,6 +81,7 @@ export default function SessionsPage() {
                   title={session.title}
                   desc={session.desc}
                   image={session.image}
+                  href={session.href}
                 />
               </FadeIn>
             ))}

@@ -2,15 +2,18 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 interface SessionCardProps {
   title: string;
   desc: string;
   image: string;
+  href: string;
 }
 
-export default function SessionCard({ title, desc, image }: SessionCardProps) {
+export default function SessionCard({ title, desc, image, href }: SessionCardProps) {
   return (
+    <Link href={href}>
     <motion.div
       className="group relative bg-cream overflow-hidden cursor-pointer h-full flex flex-col"
       whileHover="hover"
@@ -60,9 +63,10 @@ export default function SessionCard({ title, desc, image }: SessionCardProps) {
           }}
           transition={{ duration: 0.3, delay: 0.1 }}
         >
-          Learn More
+          View Gallery →
         </motion.span>
       </div>
     </motion.div>
+    </Link>
   );
 }

@@ -6,15 +6,15 @@ import PortfolioCard from "../components/PortfolioCard";
 import { JsonLd, breadcrumbs } from "../components/JsonLd";
 
 const portfolio = [
-  { title: "Emma - Senior", folder: "Emma_-_Senior", cover: "IMG_8961.jpeg" },
-  { title: "Luca - Portraits", folder: "Luca_-_portraits", cover: "0T8A0834.jpg" },
-  { title: "Adrina - Pregnancy Announcement", folder: "adrina_-_pregnancy_announcement_session", cover: "0T8A0309-2.jpg" },
-  { title: "Bonczyk Family", folder: "bonczyk_family", cover: "IMG_9536.jpeg" },
-  { title: "Coats Family", folder: "coats_family", cover: "0T8A7502.jpg" },
-  { title: "Lauren & Baby - In Home", folder: "in_home_session", cover: "0T8A9159.jpg" },
-  { title: "Magruders - In Home Newborn", folder: "magruders_-_in_home_newborn_session", cover: "0T8A3973.jpg" },
-  { title: "Schultheis Family", folder: "schultheis_family", cover: "0T8A0108.jpg" },
-  { title: "Williams Family", folder: "williams_family", cover: "0T8A4861.jpeg" },
+  { title: "Emma - Senior", folder: "Emma_-_Senior", cover: "IMG_8961.webp" },
+  { title: "Luca - Portraits", folder: "Luca_-_portraits", cover: "0T8A0834.webp" },
+  { title: "Adrina - Pregnancy Announcement", folder: "adrina_-_pregnancy_announcement_session", cover: "0T8A0309-2.webp" },
+  { title: "Bonczyk Family", folder: "bonczyk_family", cover: "IMG_9536.webp" },
+  { title: "Coats Family", folder: "coats_family", cover: "0T8A7502.webp" },
+  { title: "Lauren & Baby - In Home", folder: "in_home_session", cover: "0T8A9159.webp" },
+  { title: "Magruders - In Home Newborn", folder: "magruders_-_in_home_newborn_session", cover: "0T8A3973.webp" },
+  { title: "Schultheis Family", folder: "schultheis_family", cover: "0T8A0108.webp" },
+  { title: "Williams Family", folder: "williams_family", cover: "0T8A4861.webp" },
 ];
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Portfolio | Lauren Mitchell Photography",
     description: "Browse session galleries by Lauren Mitchell Photography.",
     url: "/portfolio",
-    images: [{ url: "/portfolio-hero.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/portfolio-hero.webp", width: 1200, height: 630 }],
   },
 };
 
@@ -40,7 +40,7 @@ export default function PortfolioPage() {
 
       {/* ── Hero Banner ── */}
       <section className="relative h-[90vh] min-h-[700px] bg-charcoal flex items-center justify-center overflow-hidden">
-        <Image src="/portfolio-hero.jpg" alt="Portfolio" fill priority className="object-cover object-center" />
+        <Image src="/portfolio-hero.webp" alt="Portfolio" fill priority placeholder="blur" blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTYgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iOSIgZmlsbD0iI0M0QjI5QSIvPjwvc3ZnPg==" className="object-cover object-center" />
         <div className="absolute inset-0 bg-charcoal/50" />
         <div className="relative text-center px-6">
           <FadeIn>

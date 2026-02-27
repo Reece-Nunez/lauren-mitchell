@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       "Meet Lauren Mitchell — lifestyle and portrait photographer in Ponca City, Oklahoma.",
     url: "/about",
-    images: [{ url: "/branding/hero.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/branding/hero.webp", width: 1200, height: 630 }],
   },
 };
 
@@ -30,10 +30,12 @@ export default function AboutPage() {
       {/* ── Hero Banner ── */}
       <section className="relative h-[90vh] min-h-[700px] overflow-hidden">
         <Image
-          src="/branding/hero.jpg"
+          src="/branding/hero.webp"
           alt="Floral arrangement"
           fill
           priority
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTYgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iOSIgZmlsbD0iI0M0QjI5QSIvPjwvc3ZnPg=="
           className="object-cover object-top"
         />
         <div className="absolute inset-0 bg-charcoal/40" />
@@ -54,9 +56,11 @@ export default function AboutPage() {
             <FadeIn>
               <div className="relative aspect-[3/4] w-full max-w-[480px] mx-auto lg:mx-0">
                 <Image
-                  src="/branding/0T8A9088.jpg"
+                  src="/branding/0T8A9088.webp"
                   alt="Lauren Mitchell smiling with her camera"
                   fill
+                  placeholder="blur"
+                  blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTYgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iOSIgZmlsbD0iI0M0QjI5QSIvPjwvc3ZnPg=="
                   className="object-cover"
                 />
               </div>
@@ -115,9 +119,11 @@ export default function AboutPage() {
             <FadeIn delay={0}>
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/branding/0T8A9036.jpg"
+                  src="/branding/0T8A9036.webp"
                   alt="Lauren sitting on couch with camera"
                   fill
+                  placeholder="blur"
+                  blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTYgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iOSIgZmlsbD0iI0M0QjI5QSIvPjwvc3ZnPg=="
                   className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -125,9 +131,11 @@ export default function AboutPage() {
             <FadeIn delay={0.1}>
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/branding/0T8A9046.jpg"
+                  src="/branding/0T8A9046.webp"
                   alt="Lauren standing with camera at her side"
                   fill
+                  placeholder="blur"
+                  blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTYgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iOSIgZmlsbD0iI0M0QjI5QSIvPjwvc3ZnPg=="
                   className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -135,9 +143,11 @@ export default function AboutPage() {
             <FadeIn delay={0.2}>
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/branding/0T8A9077.jpg"
+                  src="/branding/0T8A9077.webp"
                   alt="Lauren seated with camera, looking down"
                   fill
+                  placeholder="blur"
+                  blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTYgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iOSIgZmlsbD0iI0M0QjI5QSIvPjwvc3ZnPg=="
                   className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -145,9 +155,11 @@ export default function AboutPage() {
             <FadeIn delay={0.3}>
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/branding/0T8A9079.jpg"
+                  src="/branding/0T8A9079.webp"
                   alt="Lauren smiling, chin resting on hand"
                   fill
+                  placeholder="blur"
+                  blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTYgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iOSIgZmlsbD0iI0M0QjI5QSIvPjwvc3ZnPg=="
                   className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>

@@ -14,8 +14,8 @@ export const localBusiness = {
   url: "https://www.laurenmitchellstudio.com",
   telephone: "+19187589297",
   email: "hello@laurenmitchellstudio.com",
-  image: "https://www.laurenmitchellstudio.com/branding/hero.jpg",
-  logo: "https://www.laurenmitchellstudio.com/android-chrome-512x512.png",
+  image: "https://www.laurenmitchellstudio.com/branding/hero.webp",
+  logo: "https://www.laurenmitchellstudio.com/android-chrome-512x512.webp",
   description:
     "Professional photographer in Ponca City, Oklahoma specializing in maternity, family, newborn, and event photography.",
   address: {
@@ -73,7 +73,7 @@ export const photographerPerson = {
   name: "Lauren Mitchell",
   jobTitle: "Photographer",
   url: "https://www.laurenmitchellstudio.com/about",
-  image: "https://www.laurenmitchellstudio.com/branding/hero.jpg",
+  image: "https://www.laurenmitchellstudio.com/branding/hero.webp",
   sameAs: [
     "https://www.instagram.com/laurenmitchellphoto/",
     "https://www.facebook.com/profile.php?id=61568352021526",

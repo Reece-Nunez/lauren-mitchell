@@ -46,7 +46,7 @@ function getImages(folder: string) {
 
   return fs
     .readdirSync(dir)
-    .filter((f) => /\.(jpg|jpeg|png|webp)$/i.test(f) && f !== "hero.jpg" && f !== "hero.jpeg")
+    .filter((f) => /\.(jpg|jpeg|png|webp)$/i.test(f) && f !== "hero.webp" && f !== "hero.jpg" && f !== "hero.jpeg")
     .sort()
     .map((f) => `/gallery/${folder}/${f}`);
 }
@@ -57,9 +57,11 @@ export default async function GalleryPage({ params }: { params: Promise<{ folder
   const images = getImages(folder);
 
   // Find the hero image extension
-  const heroExt = fs.existsSync(path.join(process.cwd(), "public", "gallery", folder, "hero.jpeg"))
-    ? "jpeg"
-    : "jpg";
+  const heroExt = fs.existsSync(path.join(process.cwd(), "public", "gallery", folder, "hero.webp"))
+    ? "webp"
+    : fs.existsSync(path.join(process.cwd(), "public", "gallery", folder, "hero.jpeg"))
+      ? "jpeg"
+      : "jpg";
 
   return (
     <>
@@ -77,6 +79,8 @@ export default async function GalleryPage({ params }: { params: Promise<{ folder
           alt={title}
           fill
           priority
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTYgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iOSIgZmlsbD0iIzJDMjgyNCIvPjwvc3ZnPg=="
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-charcoal/40" />
