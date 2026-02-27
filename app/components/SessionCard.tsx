@@ -12,10 +12,7 @@ interface SessionCardProps {
 }
 
 export default function SessionCard({ title, desc, image, href }: SessionCardProps) {
-  const Wrapper = href ? Link : "div";
-  const wrapperProps = href ? { href } : {};
-  return (
-    <Wrapper {...wrapperProps as Record<string, string>}>
+  const card = (
     <motion.div
       className="group relative bg-cream overflow-hidden cursor-pointer h-full flex flex-col"
       whileHover="hover"
@@ -71,6 +68,7 @@ export default function SessionCard({ title, desc, image, href }: SessionCardPro
         )}
       </div>
     </motion.div>
-    </Wrapper>
   );
+
+  return href ? <Link href={href}>{card}</Link> : card;
 }
