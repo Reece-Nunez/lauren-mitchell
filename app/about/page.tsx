@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       "Meet Lauren Mitchell — lifestyle and portrait photographer in Ponca City, Oklahoma.",
     url: "/about",
-    images: [{ url: "/branding/hero.webp", width: 1200, height: 630 }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
 };
 

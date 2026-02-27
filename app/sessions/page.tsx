@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description:
       "Maternity, family, newborn & event photography sessions in Ponca City, Oklahoma.",
     url: "/sessions",
-    images: [{ url: "/sessions-hero.webp", width: 1200, height: 630 }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
 };
 

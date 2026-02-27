@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Lauren Mitchell Photography",
     images: [
       {
-        url: "/branding/hero.webp",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Lauren Mitchell Photography",

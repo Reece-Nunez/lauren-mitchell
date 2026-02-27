@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Portfolio | Lauren Mitchell Photography",
     description: "Browse session galleries by Lauren Mitchell Photography.",
     url: "/portfolio",
-    images: [{ url: "/portfolio-hero.webp", width: 1200, height: 630 }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
 };
 
