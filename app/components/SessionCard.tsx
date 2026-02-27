@@ -8,12 +8,14 @@ interface SessionCardProps {
   title: string;
   desc: string;
   image: string;
-  href: string;
+  href?: string;
 }
 
 export default function SessionCard({ title, desc, image, href }: SessionCardProps) {
+  const Wrapper = href ? Link : "div";
+  const wrapperProps = href ? { href } : {};
   return (
-    <Link href={href}>
+    <Wrapper {...wrapperProps as Record<string, string>}>
     <motion.div
       className="group relative bg-cream overflow-hidden cursor-pointer h-full flex flex-col"
       whileHover="hover"
@@ -55,18 +57,20 @@ export default function SessionCard({ title, desc, image, href }: SessionCardPro
         <p className="font-body text-sm text-charcoal/50 leading-relaxed">
           {desc}
         </p>
-        <motion.span
-          className="inline-block mt-5 font-body text-[11px] tracking-[0.2em] uppercase text-blush"
-          variants={{
-            rest: { opacity: 0, y: 8 },
-            hover: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.3, delay: 0.1 }}
-        >
-          View Gallery →
-        </motion.span>
+        {href && (
+          <motion.span
+            className="inline-block mt-5 font-body text-[11px] tracking-[0.2em] uppercase text-blush"
+            variants={{
+              rest: { opacity: 0, y: 8 },
+              hover: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+          >
+            View Gallery →
+          </motion.span>
+        )}
       </div>
     </motion.div>
-    </Link>
+    </Wrapper>
   );
 }
