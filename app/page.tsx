@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description:
       "Professional maternity, family, newborn & event photographer in Ponca City, Oklahoma.",
     url: "/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
 };
 

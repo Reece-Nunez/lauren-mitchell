@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description:
       "Book your photography session with Lauren Mitchell in Ponca City, Oklahoma.",
     url: "/contact",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
 };
 
