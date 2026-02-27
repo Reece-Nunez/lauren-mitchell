@@ -1,16 +1,28 @@
+import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import FadeIn from "../components/FadeIn";
 import ContactForm from "../components/ContactForm";
+import { JsonLd, breadcrumbs } from "../components/JsonLd";
 
-export const metadata = {
-  title: "Contact | Lauren Mitchell Photography",
+export const metadata: Metadata = {
+  title: "Contact & Book a Session",
   description:
-    "Get in touch with Lauren Mitchell Photography to book your session. Based in Ponca City, Oklahoma.",
+    "Contact Lauren Mitchell Photography to book your maternity, family, newborn or event session. Based in Ponca City, Oklahoma — available for travel.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact | Lauren Mitchell Photography",
+    description:
+      "Book your photography session with Lauren Mitchell in Ponca City, Oklahoma.",
+    url: "/contact",
+  },
 };
+
+const BASE = "https://www.laurenmitchellstudio.com";
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={breadcrumbs([{ name: "Home", url: BASE }, { name: "Contact", url: `${BASE}/contact` }])} />
       <Navbar />
 
       {/* ── Hero Banner ── */}

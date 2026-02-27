@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import FadeIn from "../components/FadeIn";
 import PortfolioCard from "../components/PortfolioCard";
+import { JsonLd, breadcrumbs } from "../components/JsonLd";
 
 const portfolio = [
   { title: "Emma - Senior", folder: "Emma_-_Senior", cover: "IMG_8961.jpeg" },
@@ -15,14 +17,25 @@ const portfolio = [
   { title: "Williams Family", folder: "williams_family", cover: "0T8A4861.jpeg" },
 ];
 
-export const metadata = {
-  title: "Portfolio | Lauren Mitchell Photography",
-  description: "Browse all session galleries by Lauren Mitchell Photography.",
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description:
+    "Browse portrait, family, maternity, newborn & event session galleries by Lauren Mitchell Photography in Ponca City, Oklahoma.",
+  alternates: { canonical: "/portfolio" },
+  openGraph: {
+    title: "Portfolio | Lauren Mitchell Photography",
+    description: "Browse session galleries by Lauren Mitchell Photography.",
+    url: "/portfolio",
+    images: [{ url: "/portfolio-hero.jpg", width: 1200, height: 630 }],
+  },
 };
+
+const BASE = "https://www.laurenmitchellstudio.com";
 
 export default function PortfolioPage() {
   return (
     <>
+      <JsonLd data={breadcrumbs([{ name: "Home", url: BASE }, { name: "Portfolio", url: `${BASE}/portfolio` }])} />
       <Navbar />
 
       {/* ── Hero Banner ── */}

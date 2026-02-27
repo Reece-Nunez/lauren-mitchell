@@ -2,9 +2,54 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lauren Mitchell Photography | Ponca City, OK",
+  metadataBase: new URL("https://www.laurenmitchellstudio.com"),
+  title: {
+    default: "Lauren Mitchell Photography | Ponca City, OK",
+    template: "%s | Lauren Mitchell Photography",
+  },
   description:
-    "Lauren Mitchell Photography — capturing life's most tender moments. Newborn, family, and portrait photography in Ponca City, Oklahoma.",
+    "Professional maternity, family, newborn & event photographer in Ponca City, Oklahoma. Capturing life's most tender moments.",
+  keywords: [
+    "photographer",
+    "Ponca City photographer",
+    "Oklahoma photographer",
+    "family photographer",
+    "newborn photographer",
+    "maternity photographer",
+    "event photographer",
+    "portrait photographer",
+    "wedding photographer",
+    "Ponca City Oklahoma",
+  ],
+  authors: [{ name: "Lauren Mitchell" }],
+  creator: "Lauren Mitchell Photography",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Lauren Mitchell Photography",
+    images: [
+      {
+        url: "/branding/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lauren Mitchell Photography",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import HeroGallery from "./components/HeroGallery";
@@ -5,6 +6,20 @@ import FadeIn from "./components/FadeIn";
 import SessionCard from "./components/SessionCard";
 import Testimonials from "./components/Testimonials";
 import PortfolioCard from "./components/PortfolioCard";
+import { JsonLd, localBusiness, webSite } from "./components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "Lauren Mitchell Photography | Ponca City, OK Photographer",
+  description:
+    "Professional maternity, family, newborn & event photographer in Ponca City, Oklahoma. Capturing life's most tender moments for your family.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Lauren Mitchell Photography | Ponca City, OK",
+    description:
+      "Professional maternity, family, newborn & event photographer in Ponca City, Oklahoma.",
+    url: "/",
+  },
+};
 
 const portfolio = [
   { title: "Emma - Senior", folder: "Emma_-_Senior", cover: "IMG_8961.jpeg" },
@@ -44,6 +59,8 @@ const sessions = [
 export default function Home() {
   return (
     <>
+      <JsonLd data={localBusiness} />
+      <JsonLd data={webSite} />
       <Navbar />
       <HeroGallery />
 

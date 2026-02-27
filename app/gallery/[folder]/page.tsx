@@ -1,9 +1,11 @@
 import fs from "fs";
 import path from "path";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import FadeIn from "../../components/FadeIn";
 import GalleryGrid from "../../components/GalleryGrid";
+import { JsonLd, breadcrumbs } from "../../components/JsonLd";
 
 const sessionNames: Record<string, string> = {
   "Emma_-_Senior": "Emma - Senior",
@@ -21,11 +23,20 @@ export function generateStaticParams() {
   return Object.keys(sessionNames).map((folder) => ({ folder }));
 }
 
-export function generateMetadata({ params }: { params: Promise<{ folder: string }> }) {
-  // For static generation we can use a sync approach via the mapping
+const BASE = "https://www.laurenmitchellstudio.com";
+
+export async function generateMetadata({ params }: { params: Promise<{ folder: string }> }): Promise<Metadata> {
+  const { folder } = await params;
+  const title = sessionNames[folder] || folder;
   return {
-    title: `Gallery | Lauren Mitchell Photography`,
-    description: "View the full gallery from this session by Lauren Mitchell Photography.",
+    title: `${title} Gallery`,
+    description: `View the full ${title} session gallery by Lauren Mitchell Photography in Ponca City, Oklahoma.`,
+    alternates: { canonical: `/gallery/${folder}` },
+    openGraph: {
+      title: `${title} Gallery | Lauren Mitchell Photography`,
+      description: `View the full ${title} session gallery.`,
+      url: `/gallery/${folder}`,
+    },
   };
 }
 
@@ -52,6 +63,11 @@ export default async function GalleryPage({ params }: { params: Promise<{ folder
 
   return (
     <>
+      <JsonLd data={breadcrumbs([
+        { name: "Home", url: BASE },
+        { name: "Portfolio", url: `${BASE}/portfolio` },
+        { name: title, url: `${BASE}/gallery/${folder}` },
+      ])} />
       <Navbar />
 
       {/* ── Hero Banner ── */}

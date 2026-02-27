@@ -1,16 +1,30 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import FadeIn from "../components/FadeIn";
+import { JsonLd, photographerPerson, breadcrumbs } from "../components/JsonLd";
 
-export const metadata = {
-  title: "About | Lauren Mitchell Photography",
+export const metadata: Metadata = {
+  title: "About Lauren Mitchell",
   description:
-    "Meet Lauren Mitchell — a lifestyle and portrait photographer based in Ponca City, Oklahoma, capturing life's most tender moments.",
+    "Meet Lauren Mitchell — a lifestyle and portrait photographer based in Ponca City, Oklahoma. Mom of three, passionate about capturing candid, everyday moments.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Lauren Mitchell | Ponca City Photographer",
+    description:
+      "Meet Lauren Mitchell — lifestyle and portrait photographer in Ponca City, Oklahoma.",
+    url: "/about",
+    images: [{ url: "/branding/hero.jpg", width: 1200, height: 630 }],
+  },
 };
+
+const BASE = "https://www.laurenmitchellstudio.com";
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={photographerPerson} />
+      <JsonLd data={breadcrumbs([{ name: "Home", url: BASE }, { name: "About", url: `${BASE}/about` }])} />
       <Navbar />
 
       {/* ── Hero Banner ── */}

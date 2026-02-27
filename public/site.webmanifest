@@ -1,1 +1,13 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+  "name": "Lauren Mitchell Photography",
+  "short_name": "LM Photo",
+  "description": "Professional maternity, family, newborn & event photographer in Ponca City, Oklahoma.",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#2C2824",
+  "background_color": "#F2E6D4",
+  "display": "standalone",
+  "start_url": "/"
+}

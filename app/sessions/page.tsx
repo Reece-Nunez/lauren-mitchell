@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import FadeIn from "../components/FadeIn";
 import SessionCard from "../components/SessionCard";
+import { JsonLd, services, breadcrumbs } from "../components/JsonLd";
 
 const sessions = [
   {
@@ -26,14 +28,27 @@ const sessions = [
   },
 ];
 
-export const metadata = {
-  title: "Sessions | Lauren Mitchell Photography",
-  description: "Explore the photography sessions offered by Lauren Mitchell — maternity, family, newborn and baby, and events.",
+export const metadata: Metadata = {
+  title: "Sessions & Services",
+  description:
+    "Explore maternity, family, newborn & event photography sessions by Lauren Mitchell Photography in Ponca City, Oklahoma. Book your session today.",
+  alternates: { canonical: "/sessions" },
+  openGraph: {
+    title: "Sessions & Services | Lauren Mitchell Photography",
+    description:
+      "Maternity, family, newborn & event photography sessions in Ponca City, Oklahoma.",
+    url: "/sessions",
+    images: [{ url: "/sessions-hero.jpg", width: 1200, height: 630 }],
+  },
 };
+
+const BASE = "https://www.laurenmitchellstudio.com";
 
 export default function SessionsPage() {
   return (
     <>
+      <JsonLd data={services} />
+      <JsonLd data={breadcrumbs([{ name: "Home", url: BASE }, { name: "Sessions", url: `${BASE}/sessions` }])} />
       <Navbar />
 
       {/* ── Hero Banner ── */}
