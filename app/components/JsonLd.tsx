@@ -14,8 +14,8 @@ export const localBusiness = {
   url: "https://www.laurenmitchellstudio.com",
   telephone: "+19187589297",
   email: "hello@laurenmitchellstudio.com",
-  image: "https://www.laurenmitchellstudio.com/branding/hero.webp",
-  logo: "https://www.laurenmitchellstudio.com/android-chrome-512x512.webp",
+  image: "https://www.laurenmitchellstudio.com/og-image.png",
+  logo: "https://www.laurenmitchellstudio.com/android-chrome-512x512.png",
   description:
     "Professional photographer in Ponca City, Oklahoma specializing in maternity, family, newborn, and event photography.",
   address: {
@@ -73,7 +73,7 @@ export const photographerPerson = {
   name: "Lauren Mitchell",
   jobTitle: "Photographer",
   url: "https://www.laurenmitchellstudio.com/about",
-  image: "https://www.laurenmitchellstudio.com/branding/hero.webp",
+  image: "https://www.laurenmitchellstudio.com/og-image.png",
   sameAs: [
     "https://www.instagram.com/laurenmitchellphoto/",
     "https://www.facebook.com/profile.php?id=61568352021526",
@@ -89,6 +89,25 @@ export const photographerPerson = {
     addressCountry: "US",
   },
 };
+
+export function imageGallery(title: string, folder: string, images: string[]) {
+  const base = "https://www.laurenmitchellstudio.com";
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: `${title} Gallery`,
+    description: `${title} photography session by Lauren Mitchell Photography in Ponca City, Oklahoma.`,
+    url: `${base}/gallery/${folder}`,
+    author: {
+      "@type": "Person",
+      name: "Lauren Mitchell",
+    },
+    image: images.map((img) => ({
+      "@type": "ImageObject",
+      contentUrl: `${base}${img}`,
+    })),
+  };
+}
 
 export const services = {
   "@context": "https://schema.org",

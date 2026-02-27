@@ -5,7 +5,7 @@ import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import FadeIn from "../../components/FadeIn";
 import GalleryGrid from "../../components/GalleryGrid";
-import { JsonLd, breadcrumbs } from "../../components/JsonLd";
+import { JsonLd, breadcrumbs, imageGallery } from "../../components/JsonLd";
 
 const sessionNames: Record<string, string> = {
   "Emma_-_Senior": "Emma - Senior",
@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ folder: s
       title: `${title} Gallery | Lauren Mitchell Photography`,
       description: `View the full ${title} session gallery.`,
       url: `/gallery/${folder}`,
+      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     },
   };
 }
@@ -70,6 +71,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ folder
         { name: "Portfolio", url: `${BASE}/portfolio` },
         { name: title, url: `${BASE}/gallery/${folder}` },
       ])} />
+      <JsonLd data={imageGallery(title, folder, images)} />
       <Navbar />
 
       {/* ── Hero Banner ── */}
